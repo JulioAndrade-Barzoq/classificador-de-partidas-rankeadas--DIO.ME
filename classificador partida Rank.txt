@@ -1,0 +1,28 @@
+let nivel = "" ;
+let saldoVitorias = 0 ;
+function calcSaldo (vitorias , derrotas) {
+    saldoVitorias = vitorias - derrotas ;
+
+ return saldoVitorias ;
+}
+let vitorias = Number(prompt("Insira a quantidade de vitórias do Herói : ")) ;
+let derrotas = Number(prompt("Insira a quantidade de derrotas do Herói : ")) ;
+let saldoVxD = calcSaldo(vitorias,derrotas) ;
+
+if (saldoVitorias<10){
+    nivel="ferro" ;
+} else if ((saldoVitorias>=11)&&(saldoVitorias<20)){
+    nivel="bronze" ;
+} else if ((saldoVitorias>=21)&&(saldoVitorias<50)){
+    nivel="prata" ;
+}else if ((saldoVitorias>=51)&&(saldoVitorias<80)){
+    nivel="ouro"  ;
+}else if ((saldoVitorias>=81)&&(saldoVitorias<90)){
+    nivel="diamante" ;
+}else if ((saldoVitorias>=91)&&(saldoVitorias<100)){
+    nivel="lendário" ;
+}else if (saldoVitorias>=101){
+    nivel="Imortal" ;
+}
+
+console.log("O saldo de vitórias do herói é de " + saldoVxD + "vitórias !") ;
